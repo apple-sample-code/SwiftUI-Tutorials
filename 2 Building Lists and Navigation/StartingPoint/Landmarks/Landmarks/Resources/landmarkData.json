@@ -17,7 +17,7 @@
         "category": "Lakes",
         "city": "Port Alsworth",
         "state": "Alaska",
-        "id": 4,
+        "id": 1002,
         "park": "Lake Clark National Park and Preserve",
         "coordinates": {
             "longitude": -152.665167,
@@ -30,7 +30,7 @@
         "category": "Rivers",
         "city": "Skagway",
         "state": "Alaska",
-        "id": 5,
+        "id": 1003,
         "park": "Klondike Gold Rush National Historical Park",
         "coordinates": {
             "longitude": -135.334571,
@@ -43,7 +43,7 @@
         "category": "Lakes",
         "city": "Browning",
         "state": "Montana",
-        "id": 8,
+        "id": 1004,
         "park": "Glacier National Park",
         "coordinates": {
             "longitude": -113.536248,
@@ -56,7 +56,7 @@
         "category": "Lakes",
         "city": "Twin Lakes",
         "state": "Alaska",
-        "id": 11,
+        "id": 1005,
         "park": "Lake Clark National Park and Preserve",
         "coordinates": {
             "longitude": -153.849883,
@@ -69,7 +69,7 @@
         "category": "Lakes",
         "city": "West Glacier",
         "state": "Montana",
-        "id": 6,
+        "id": 1006,
         "park": "Glacier National Park",
         "coordinates": {
             "longitude": -113.934831,
@@ -82,7 +82,7 @@
         "category": "Rivers",
         "city": "Eaking",
         "state": "Alaska",
-        "id": 1,
+        "id": 1007,
         "park": "Charley Rivers National Preserve",
         "coordinates": {
             "longitude": -143.122586,
@@ -95,7 +95,7 @@
         "category": "Lakes",
         "city": "Icy Bay",
         "state": "Alaska",
-        "id": 2,
+        "id": 1008,
         "park": "Wrangell-St. Elias National Park and Preserve",
         "coordinates": {
             "longitude": -141.518167,
@@ -108,7 +108,7 @@
         "category": "Lakes",
         "city": "Willow",
         "state": "Alaska",
-        "id": 3,
+        "id": 1009,
         "park": "State Recreation Area",
         "coordinates": {
             "longitude": -150.086103,
@@ -121,7 +121,7 @@
         "category": "Lakes",
         "city": "Newhalem",
         "state": "Washington",
-        "id": 7,
+        "id": 1010,
         "park": "North Cascades National Park",
         "coordinates": {
             "longitude": -121.17799,
@@ -134,7 +134,7 @@
         "category": "Rivers",
         "city": "Chincoteague",
         "state": "Virginia",
-        "id": 9,
+        "id": 1011,
         "park": "Chincoteague National Wildlife Refuge",
         "coordinates": {
             "longitude": -75.383212,
@@ -147,7 +147,7 @@
         "category": "Lakes",
         "city": "Errol",
         "state": "New Hampshire",
-        "id": 10,
+        "id": 1012,
         "park": "Umbagog National Wildlife Refuge",
         "coordinates": {
             "longitude": -71.056816,

@@ -19,22 +19,23 @@ struct LandmarkList: View {
                 
                 ForEach(userData.landmarks) { landmark in
                     if !self.userData.showFavoritesOnly || landmark.isFavorite {
-                        NavigationButton(
-                        destination: LandmarkDetail(landmark: landmark)) {
+                        NavigationLink(
+                            destination: LandmarkDetail(landmark: landmark)
+                                .environmentObject(self.userData)
+                        ) {
                             LandmarkRow(landmark: landmark)
                         }
                     }
                 }
             }
-            .navigationBarTitle(Text("Landmarks"), displayMode: .large)
+            .navigationBarTitle(Text("Landmarks"))
         }
     }
 }
 
-#if DEBUG
 struct LandmarksList_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
+        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
             LandmarkList()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
@@ -42,4 +43,3 @@ struct LandmarksList_Previews: PreviewProvider {
         .environmentObject(UserData())
     }
 }
-#endif

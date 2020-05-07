@@ -36,10 +36,8 @@ struct LandmarkDetail: View {
     }
 }
 
-#if DEBUG
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
         LandmarkDetail()
     }
 }
-#endif

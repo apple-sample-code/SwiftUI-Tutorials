@@ -13,9 +13,10 @@ struct LandmarkDetail: View {
     var body: some View {
         VStack {
             MapView(coordinate: landmark.locationCoordinate)
+                .edgesIgnoringSafeArea(.top)
                 .frame(height: 300)
 
-            CircleImage(image: landmark.image(forSize: 250))
+            CircleImage(image: landmark.image)
                 .offset(x: 0, y: -130)
                 .padding(.bottom, -130)
 
@@ -35,14 +36,12 @@ struct LandmarkDetail: View {
 
             Spacer()
         }
-        .navigationBarTitle(Text(verbatim: landmark.name), displayMode: .inline)
+        .navigationBarTitle(Text(landmark.name), displayMode: .inline)
     }
 }
 
-#if DEBUG
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
         LandmarkDetail(landmark: landmarkData[0])
     }
 }
-#endif

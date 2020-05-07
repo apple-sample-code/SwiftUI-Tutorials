@@ -12,14 +12,15 @@ struct LandmarkRow: View {
 
     var body: some View {
         HStack {
-            landmark.image(forSize: 50)
-            Text(verbatim: landmark.name)
+            landmark.image
+                .resizable()
+                .frame(width: 50, height: 50)
+            Text(landmark.name)
             Spacer()
         }
     }
 }
 
-#if DEBUG
 struct LandmarkRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -29,4 +30,3 @@ struct LandmarkRow_Previews: PreviewProvider {
         .previewLayout(.fixed(width: 300, height: 70))
     }
 }
-#endif

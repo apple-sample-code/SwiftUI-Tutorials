@@ -2,7 +2,7 @@
 See LICENSE folder for this sample’s licensing information.
 
 Abstract:
-A view displaying inforamtion about a hike, including an elevation graph.
+A view displaying information about a hike, including an elevation graph.
 */
 
 import SwiftUI
@@ -19,9 +19,9 @@ struct HikeView: View {
                     .animation(nil)
                 
                 VStack(alignment: .leading) {
-                    Text(verbatim: hike.name)
+                    Text(hike.name)
                         .font(.headline)
-                    Text(verbatim: hike.distanceText)
+                    Text(hike.distanceText)
                 }
                 
                 Spacer()
@@ -43,7 +43,6 @@ struct HikeView: View {
     }
 }
 
-#if DEBUG
 struct HikeView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -53,4 +52,3 @@ struct HikeView_Previews: PreviewProvider {
         }
     }
 }
-#endif

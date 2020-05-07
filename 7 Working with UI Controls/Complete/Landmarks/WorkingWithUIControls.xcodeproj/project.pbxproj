@@ -54,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C249B054B1162DF28CD504A /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = ../Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		9468E2AE3DC3F388E84A29BD /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
 		B7310DD0229F6839001079B9 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 		B7310DD2229F6CA9001079B9 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		B7394862229F194000C47603 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,8 +102,6 @@
 		B7D587DA22A08D67006E8DCF /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		B7D587DC22A08DD6006E8DCF /* HikeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeBadge.swift; sourceTree = "<group>"; };
 		B7D587DE22A08E1A006E8DCF /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
-		C30D96E0C30D9A6000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = ../Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
-		C35276F0C352949000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
 		C4E4AAA0C4E4035000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,14 +116,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C8A402C77B3496648F32598 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8C249B054B1162DF28CD504A /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		5109654D70624D1B2DAA3DED /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				9468E2AE3DC3F388E84A29BD /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = ../LICENSE;
+			sourceTree = "<group>";
+		};
 		B7394859229F194000C47603 = {
 			isa = PBXGroup;
 			children = (
 				C4E4AAA0C4E4035000000001 /* README.md */,
 				B7394864229F194000C47603 /* Landmarks */,
 				B7394863229F194000C47603 /* Products */,
-				C16018F0C1601FC000000001 /* Configuration */,
-				C3527360C3512CA000000001 /* LICENSE */,
+				4C8A402C77B3496648F32598 /* Configuration */,
+				5109654D70624D1B2DAA3DED /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B739487E229F282200C47603 /* Models */,
-				B7D587D722A08D16006E8DCF /* Profiles */,
+				B7D587D722A08D16006E8DCF /* Profile */,
 				B7394865229F194000C47603 /* AppDelegate.swift */,
 				B7394867229F194000C47603 /* SceneDelegate.swift */,
 				B7D587D122A0892C006E8DCF /* Home.swift */,
@@ -217,31 +234,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B7D587D722A08D16006E8DCF /* Profiles */ = {
+		B7D587D722A08D16006E8DCF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				B7D587D822A08D33006E8DCF /* ProfileHost.swift */,
 				B7D587DA22A08D67006E8DCF /* ProfileSummary.swift */,
 				B7D587DE22A08E1A006E8DCF /* ProfileEditor.swift */,
 			);
-			path = Profiles;
-			sourceTree = "<group>";
-		};
-		C16018F0C1601FC000000001 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				C30D96E0C30D9A6000000001 /* SampleCode.xcconfig */,
-			);
-			name = Configuration;
-			sourceTree = "<group>";
-		};
-		C3527360C3512CA000000001 /* LICENSE */ = {
-			isa = PBXGroup;
-			children = (
-				C35276F0C352949000000001 /* LICENSE.txt */,
-			);
-			name = LICENSE;
-			path = ../LICENSE;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +254,6 @@
 				B739485E229F194000C47603 /* Sources */,
 				B739485F229F194000C47603 /* Frameworks */,
 				B7394860229F194000C47603 /* Resources */,
-				C602AC70C605937000000001,
 			);
 			buildRules = (
 			);
@@ -376,7 +375,7 @@
 /* Begin XCBuildConfiguration section */
 		B7394874229F194200C47603 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C30D96E0C30D9A6000000001 /* SampleCode.xcconfig */;
+			baseConfigurationReference = 8C249B054B1162DF28CD504A /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -437,7 +436,7 @@
 		};
 		B7394875229F194200C47603 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C30D96E0C30D9A6000000001 /* SampleCode.xcconfig */;
+			baseConfigurationReference = 8C249B054B1162DF28CD504A /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -492,7 +491,7 @@
 		};
 		B7394877229F194200C47603 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C30D96E0C30D9A6000000001 /* SampleCode.xcconfig */;
+			baseConfigurationReference = 8C249B054B1162DF28CD504A /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -514,7 +513,7 @@
 		};
 		B7394878229F194200C47603 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C30D96E0C30D9A6000000001 /* SampleCode.xcconfig */;
+			baseConfigurationReference = 8C249B054B1162DF28CD504A /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

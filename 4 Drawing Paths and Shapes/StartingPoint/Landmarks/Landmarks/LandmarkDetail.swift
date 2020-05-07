@@ -21,13 +21,13 @@ struct LandmarkDetail: View {
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 300)
             
-            CircleImage(image: landmark.image(forSize: 250))
+            CircleImage(image: landmark.image)
                 .offset(x: 0, y: -130)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text(verbatim: landmark.name)
+                    Text(landmark.name)
                         .font(.title)
                     
                     Button(action: {
@@ -46,10 +46,10 @@ struct LandmarkDetail: View {
                 }
                 
                 HStack(alignment: .top) {
-                    Text(verbatim: landmark.park)
+                    Text(landmark.park)
                         .font(.subheadline)
                     Spacer()
-                    Text(verbatim: landmark.state)
+                    Text(landmark.state)
                         .font(.subheadline)
                 }
             }
@@ -60,12 +60,10 @@ struct LandmarkDetail: View {
     }
 }
 
-#if DEBUG
-struct LandmarkDetail_Preview: PreviewProvider {
+struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
         let userData = UserData()
         return LandmarkDetail(landmark: userData.landmarks[0])
             .environmentObject(userData)
     }
 }
-#endif
