@@ -7,9 +7,24 @@ A view showing the details for a hike.
 
 import SwiftUI
 
+extension KeyPath where Root == Hike.Observation, Value == Range<Double> {
+
+    var superDescription: String {
+        switch self {
+        case \.elevation: return ".elevation"
+        case \.heartRate: return ".heartRate"
+        case \.pace: return ".pace"
+        default: return "dunno"
+        }
+    }
+}
+
 struct HikeDetail: View {
     let hike: Hike
-    @State var dataToShow = \Hike.Observation.elevation
+    @State var dataToShow = \Hike.Observation.elevation {
+        willSet { print(dataToShow.superDescription) }
+        didSet { print(dataToShow.superDescription) }
+    }
     
     var buttons = [
         ("Elevation", \Hike.Observation.elevation),
