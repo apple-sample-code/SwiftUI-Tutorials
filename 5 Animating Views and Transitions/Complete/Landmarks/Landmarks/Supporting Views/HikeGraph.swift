@@ -30,29 +30,29 @@ extension Animation {
 struct HikeGraph: View {
     var hike: Hike
     var path: KeyPath<Hike.Observation, Range<Double>>
-    
-    var color: Color {
-        switch path {
-        case \.elevation:
-            return .gray
-        case \.heartRate:
-            return Color(hue: 0, saturation: 0.5, brightness: 0.7)
-        case \.pace:
-            return Color(hue: 0.7, saturation: 0.4, brightness: 0.7)
-        default:
-            return .black
+
+    struct Info: Equatable, Hashable, Identifiable {
+        var id: Int { index }
+        let index: Int
+        let observation: Hike.Observation
+        let keyPath: KeyPath<Hike.Observation, Range<Double>>
+        var range: Range<Double> { observation[keyPath: keyPath] }
+
+        var color: Color {
+            switch keyPath {
+            case \.elevation:
+                return .gray
+            case \.heartRate:
+                return Color(hue: 0, saturation: 0.5, brightness: 0.7)
+            case \.pace:
+                return Color(hue: 0.7, saturation: 0.4, brightness: 0.7)
+            default:
+                return .black
+            }
         }
     }
     
     var body: some View {
-
-        struct Info: Equatable, Hashable, Identifiable {
-            var id: Int { index }
-            let index: Int
-            let observation: Hike.Observation
-            let keyPath: KeyPath<Hike.Observation, Range<Double>>
-            var range: Range<Double> { observation[keyPath: keyPath] }
-        }
 
         let data = hike.observations
         let overallRange = rangeOfRanges(data.lazy.map { $0[keyPath: self.path] })
@@ -68,7 +68,7 @@ struct HikeGraph: View {
                         height: proxy.size.height,
                         range: info.range,
                         overallRange: overallRange)
-                    .colorMultiply(self.color)
+                    .colorMultiply(info.color)
                     .transition(.slide)
                     .animation(.ripple(index: info.index))
                 }
