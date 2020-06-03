@@ -45,22 +45,30 @@ struct HikeGraph: View {
     }
     
     var body: some View {
+
+        struct Info: Identifiable {
+            var id: Int { index }
+            let index: Int
+            let range: Range<Double>
+        }
+
         let data = hike.observations
         let overallRange = rangeOfRanges(data.lazy.map { $0[keyPath: self.path] })
         let maxMagnitude = data.map { magnitude(of: $0[keyPath: path]) }.max()!
         let heightRatio = (1 - CGFloat(maxMagnitude / magnitude(of: overallRange))) / 2
+        let infos = data.enumerated().map { Info(index: $0.offset, range: $0.element[keyPath: path]) }
 
         return GeometryReader { proxy in
             HStack(alignment: .bottom, spacing: proxy.size.width / 120) {
-                ForEach(data.indices) { index in
+                ForEach(infos) { info in
                     GraphCapsule(
-                        index: index,
+                        index: info.index,
                         height: proxy.size.height,
-                        range: data[index][keyPath: self.path],
+                        range: info.range,
                         overallRange: overallRange)
                     .colorMultiply(self.color)
                     .transition(.slide)
-                    .animation(.ripple(index: index))
+                    .animation(.ripple(index: info.index))
                 }
                 .offset(x: 0, y: proxy.size.height * heightRatio)
             }
