@@ -2,12 +2,12 @@
 See LICENSE folder for this sample’s licensing information.
 
 Abstract:
-The master in the split view that contains the list and the filter views.
+The primary in the split view that contains the list and the filter views.
 */
 
 import SwiftUI
 
-struct NavigationMaster: View {
+struct NavigationPrimary: View {
     @Binding var selectedLandmark: Landmark?
     @State private var filter: FilterType = .all
 
@@ -28,9 +28,9 @@ struct NavigationMaster: View {
     }
 }
 
-struct NavigationMaster_Previews: PreviewProvider {
+struct NavigationPrimary_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationMaster(selectedLandmark: .constant(landmarkData[1]))
+        NavigationPrimary(selectedLandmark: .constant(landmarkData[1]))
             .environmentObject(UserData())
     }
 }

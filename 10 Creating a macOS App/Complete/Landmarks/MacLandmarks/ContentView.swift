@@ -12,7 +12,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            NavigationMaster(selectedLandmark: $selectedLandmark)
+            NavigationPrimary(selectedLandmark: $selectedLandmark)
             
             if selectedLandmark != nil {
                 NavigationDetail(landmark: selectedLandmark!)

@@ -127,7 +127,7 @@
 		C264FC7423690A7B00FBB2C7 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264FC7323690A7B00FBB2C7 /* LandmarkRow.swift */; };
 		C264FC7623690AFD00FBB2C7 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264FC7523690AFD00FBB2C7 /* LandmarkList.swift */; };
 		C264FC7823690C7A00FBB2C7 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264FC7723690C7A00FBB2C7 /* Filter.swift */; };
-		C264FC7A23690CD600FBB2C7 /* NavigationMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264FC7923690CD600FBB2C7 /* NavigationMaster.swift */; };
+		C264FC7A23690CD600FBB2C7 /* NavigationPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264FC7923690CD600FBB2C7 /* NavigationPrimary.swift */; };
 		C264FC7C23690DC100FBB2C7 /* NavigationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C264FC7B23690DC100FBB2C7 /* NavigationDetail.swift */; };
 		C264FC7D23690E0C00FBB2C7 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7394879229F1B3F00C47603 /* CircleImage.swift */; };
 		C264FC7E2369122C00FBB2C7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739487B229F1B6800C47603 /* MapView.swift */; };
@@ -258,7 +258,7 @@
 		C264FC7323690A7B00FBB2C7 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		C264FC7523690AFD00FBB2C7 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		C264FC7723690C7A00FBB2C7 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		C264FC7923690CD600FBB2C7 /* NavigationMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMaster.swift; sourceTree = "<group>"; };
+		C264FC7923690CD600FBB2C7 /* NavigationPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPrimary.swift; sourceTree = "<group>"; };
 		C264FC7B23690DC100FBB2C7 /* NavigationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDetail.swift; sourceTree = "<group>"; };
 		C4E4AAA0C4E4035000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -486,7 +486,7 @@
 			children = (
 				C264FC4C236907D900FBB2C7 /* AppDelegate.swift */,
 				C264FC4E236907D900FBB2C7 /* ContentView.swift */,
-				C264FC7923690CD600FBB2C7 /* NavigationMaster.swift */,
+				C264FC7923690CD600FBB2C7 /* NavigationPrimary.swift */,
 				C264FC7B23690DC100FBB2C7 /* NavigationDetail.swift */,
 				C264FC7523690AFD00FBB2C7 /* LandmarkList.swift */,
 				C264FC7323690A7B00FBB2C7 /* LandmarkRow.swift */,
@@ -597,7 +597,7 @@
 			attributes = {
 				DefaultBuildSystemTypeForWorkspace = Latest;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
 					9357B08F2318808300826E1D = {
@@ -794,7 +794,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C264FC4F236907D900FBB2C7 /* ContentView.swift in Sources */,
-				C264FC7A23690CD600FBB2C7 /* NavigationMaster.swift in Sources */,
+				C264FC7A23690CD600FBB2C7 /* NavigationPrimary.swift in Sources */,
 				C264FC6023690A3600FBB2C7 /* Profile.swift in Sources */,
 				C264FC7D23690E0C00FBB2C7 /* CircleImage.swift in Sources */,
 				C264FC5F23690A3600FBB2C7 /* Data.swift in Sources */,
@@ -974,6 +974,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1035,6 +1036,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1118,6 +1120,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MacLandmarks/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MacLandmarks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1144,6 +1147,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MacLandmarks/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MacLandmarks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
